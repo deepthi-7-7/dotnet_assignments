@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@model IEnumerable<Customer>
+@{
+    foreach(var i in Model)
+    {
+        <h5>Details of the customer with ID: @i.customerId</h5>
+        <p>Name: @i.customerName</p>
+        <p>mobile no: @i.phoneNumber</p>
+        <p>Items Purchased: @i.productsBrought</p>
+        <p>Bill: @i.totalBill</p>
+    }
+}
